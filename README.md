@@ -632,9 +632,7 @@ https://zh.wikipedia.org/w/api.php
 
 # 📄 License
 
-本项目本身的许可证请以仓库实际 LICENSE 文件为准。
-
-本插件只是 MediaWiki API 的客户端封装，具体 Wiki 页面内容及其版权归对应内容提供者所有。
+GNU Affero license 3.0
 
 ---
 
