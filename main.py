@@ -6,7 +6,7 @@
 
 from __future__ import annotations
 
-from astrbot.api import logger
+from astrbot.api import AstrBotConfig, logger
 from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.api.star import Context, Star, register
 
@@ -21,8 +21,9 @@ from .text_utils import truncate
     "1.0.0",
 )
 class MediaWikiToolsPlugin(Star):
-    def __init__(self, context: Context):
+    def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
+        self.config = config
         self._sites_config: dict[str, str] = dict(self.config.get("sites", {}) or {})
         self._default_site: str = self.config.get("default_site", "") or ""
         self._timeout: float = float(self.config.get("request_timeout", 10) or 10)
