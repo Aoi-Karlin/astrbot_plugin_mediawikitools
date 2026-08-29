@@ -5,15 +5,16 @@
         "description": "允许访问的 MediaWiki 站点白名单",
         "hint": "键为站点简称（供 site 参数引用），值为该站点 api.php 的完整地址。仅白名单内的站点可被查询，防止任意 URL 访问。",
         "default": {
-            "zhwiki": "https://zh.wikipedia.org/w/api.php",
-            "moegirl": "https://mzh.moegirl.org.cn/api.php"
+            "zhwiki 中文维基百科": "https://zh.wikipedia.org/w/api.php",
+            "moegirl 萌娘百科": "https://mzh.moegirl.org.cn/api.php"
+            "vcpedia 中文VOCALOID WIKI": "https://vcpedia.cn/api.php"
         }
     },
     "default_site": {
         "type": "string",
         "description": "未指定站点时使用的默认站点简称",
         "hint": "必须是 sites 中已存在的键，否则调用时需显式指定 site 参数",
-        "default": "zhwiki"
+        "default": "zhwiki 中文维基百科"
     },
     "request_timeout": {
         "type": "int",
