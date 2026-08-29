@@ -1,6 +1,7 @@
 {
     "sites": {
-        "type": "object",
+        "type": "dict",
+        "items": {},
         "description": "允许访问的 MediaWiki 站点白名单",
         "hint": "键为站点简称（供 site 参数引用），值为该站点 api.php 的完整地址。仅白名单内的站点可被查询，防止任意 URL 访问。",
         "default": {
