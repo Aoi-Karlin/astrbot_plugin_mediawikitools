@@ -1,0 +1,1 @@
+aiohttp>=3.9,<4.0  # 异步 HTTP 客户端，用于调用 MediaWiki Action API

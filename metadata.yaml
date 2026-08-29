@@ -1,0 +1,5 @@
+name: astrbot_plugin_mediawikitools
+desc: 让LLM通过工具调用获取指定Mediawiki站点的API内容信息。
+version: 1.0.0
+author: Azured
+homepage: "https://github.com/Aoi-Karlin/astrbot_plugin_mediawikitools"

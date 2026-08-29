@@ -1,0 +1,35 @@
+{
+    "sites": {
+        "type": "object",
+        "description": "允许访问的 MediaWiki 站点白名单",
+        "hint": "键为站点简称（供 site 参数引用），值为该站点 api.php 的完整地址。仅白名单内的站点可被查询，防止任意 URL 访问。",
+        "default": {
+            "zhwiki": "https://zh.wikipedia.org/w/api.php",
+            "moegirl": "https://mzh.moegirl.org.cn/api.php"
+        }
+    },
+    "default_site": {
+        "type": "string",
+        "description": "未指定站点时使用的默认站点简称",
+        "hint": "必须是 sites 中已存在的键，否则调用时需显式指定 site 参数",
+        "default": "zhwiki"
+    },
+    "request_timeout": {
+        "type": "int",
+        "description": "请求 MediaWiki API 的超时时间（秒）",
+        "hint": "网络较慢时可适当调大",
+        "default": 10
+    },
+    "user_agent": {
+        "type": "string",
+        "description": "请求 MediaWiki API 时使用的 User-Agent",
+        "hint": "遵循 MediaWiki API 使用礼仪，建议包含联系方式，如 AstrBotMediaWikiTools/1.0 (contact@example.com)",
+        "default": "AstrBotMediaWikiTools/1.0"
+    },
+    "max_extract_length": {
+        "type": "int",
+        "description": "返回给用户/LLM 的正文最大字符数",
+        "hint": "超出会被截断并附带提示，避免刷屏或撑爆上下文",
+        "default": 1500
+    }
+}
